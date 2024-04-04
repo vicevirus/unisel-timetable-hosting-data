@@ -13,7 +13,7 @@ from github import GithubException
 
 httpx_client = httpx.AsyncClient()
 
-github_token = ""
+github_token = os.getenv('GITHUB_TOKEN')
 
 if github_token:
     gh = Github(github_token)
