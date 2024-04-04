@@ -1,0 +1,5 @@
+httpx
+beautifulsoup4
+PyGithub
+orjson
+requests

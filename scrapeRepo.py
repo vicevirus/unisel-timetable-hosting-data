@@ -13,9 +13,8 @@ from github import GithubException
 
 httpx_client = httpx.AsyncClient()
 
+github_token = os.getenv('TOKEN_GITHUB')
 
-# Run this code at your own risk. It's a bit clunky.
-github_token = ""
 if github_token:
     gh = Github(github_token)
 else:
@@ -134,7 +133,7 @@ def fetch_data(campus, semester):
             days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
             return days[index % 7]
         elif (campus == "BJ"):
-            days = ["monday", "tuesday", "wednesday", "thursday", "friday"]
+            days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
             return days[index % 5]
         elif (campus == "F"):
             days = ["monday", "tuesday", "wednesday", "thursday", "friday"]
