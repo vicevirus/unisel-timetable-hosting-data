@@ -138,7 +138,7 @@ def fetch_data(campus, semester):
         elif (campus == "F"):
             days = ["monday", "tuesday", "wednesday", "thursday", "friday"]
             return days[index % 5]
-    num_rows = 8 if campus == "SA" else 6
+    num_rows = 8 if campus == "SA" or campus == "BJ" else 6
     subjects_time_data = []
     subject_idx = 0
     for subject in subjects_data:
